@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+		<meta name="referrer" content="no-referrer" />
+		<title>大众影评数据可视化系统</title>
+		<link rel="stylesheet" href="../static/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../static/css/app.css" />
+	</head>
+	<script type="text/javascript" src="../static/js/jquery.js"></script>
+	<script type="text/javascript" src="../static/js/loading.js"></script>
+	<body>
+
+	<!-- 全局粒子效果 -->
+	<div class="canvas" style="opacity: 0.9">
+		<iframe frameborder="0" src="../static/js/bg.html" style="width: 100%; height: 100%"></iframe>
+	</div>
+
+	<div class="loading">
+    	<div class="loadbox"><img src="../static/img/loading.gif"> 加载中...</div>
+	</div>
+
+	<header class="header">
+		<h1 data-spotlight="大众影评数据可视化系统">大众影评数据可视化系统</h1>
+		<div class="top-item">
+			<span id="showTime"></span>
+		</div>
+	</header>
+	<div class="wrapper">
+		<div class="container-fluid">
+			<div class="row fill-h">
+				<!-- 左边2个面板 -->
+				<div class="col-lg-3 fill-h">
+					<!-- 左上面板 -->
+					<div class="xpanel-wrapper xpanel-wrapper-1-2">
+						<div class="xpanel">
+							<div class="fill-h" id="leftTopChart"></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 中间1个竖面板 -->
+				<div class="col-lg-6 fill-h">
+					<!-- 中间面板 -->
+					<div class="xpanel-wrapper xpanel-wrapper-1">
+						<div class="xpanel">
+							<div class="fill-h" id="midChart">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 右边2个面板 -->
+				<div class="col-lg-3 fill-h">
+					<!-- 右上面板 -->
+					<div class="xpanel-wrapper xpanel-wrapper-2-3">
+						<div class="xpanel">
+							<div class="fill-h" id="rightTopChart"></div>
+						</div>
+					</div>
+					<!-- 右下面板 -->
+					<div class="xpanel-wrapper xpanel-wrapper-1-3">
+						<div class="xpanel">
+							<div class="fill-h" id="rightBottomChart">
+								<p>相关推荐</p>
+								<div class="item">
+									<span class="tip-content">活着 (1994)</br>导演: 张艺谋<br>主演: 葛优 / 巩俐  <br>类型: 剧情 / 家庭 </span>
+								</div>
+								<div class="item">
+									<span class="tip-content">达拉斯买家俱乐部(2013)</br>导演:让-马克·瓦雷<br>主演: 马修·麦康纳/詹妮弗·加纳  <br>类型:剧情/同性 </span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../static/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../static/js/echarts-3.8.5.min.js"></script>
+	<script type="text/javascript" src="../static/js/echarts-wordcloud.min.js"></script>
+	<script type="text/javascript" src="../static/js/echarts-liquidfill.min.js"></script>
+	<script type="text/javascript" src="../static/js/ec-leftTop.js"></script>
+	<script type="text/javascript" src="../static/js/ec-rightTop.js"></script>
+	<script type="text/javascript" src="../static/js/ec-mid.js"></script>
+	<script type="text/javascript" src="../static/js/my-style.js"></script>
+	<script type="text/javascript" src="../static/js/showtime.js"></script>
+	<script type="text/javascript" src="../static/js/dynamic-reload.js"></script>
+	<script type="text/javascript" src="../static/js/controller.js"></script>
+	<script type="text/javascript" src="../static/js/movies.js"></script>
+	</body>
+</html>

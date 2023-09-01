@@ -1,0 +1,319 @@
+@charset "utf-8";
+
+/********** Global **********/
+/*
+  常用背景色
+  #0f1c30 #0b0f34 (6,64,102) (29,45,57) (7,33,58) (8,13,28) (15,43,36)
+*/
+ 
+html, body {
+	width:100%;
+	height:100%;
+	min-height:635px;
+	font-family:"microsoft yahei", arial, sans-serif;
+	background-color:#152a59;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:100% 100%;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+
+body{
+	background-image:url("../img/bg03.png");
+	display:flex;
+	justify-content:center;
+}
+
+.header {
+	margin:0 auto;
+	width:100%;
+	height:55px;
+	max-width:1920px;
+	background:url("../img/header-left.png") left center no-repeat, url("../img/header-right.png") right center no-repeat;
+	background-size:43% 100%, 43% 100%;
+	overflow:hidden;
+}
+
+.top-item{
+	position:absolute; 
+	right:10px; top:15px; 
+	line-height: .75rem;
+}
+
+.top-item #showTime{
+	color:white;
+	font-size:15px;
+}
+
+.header h1{
+	margin:0;
+	padding:0;
+	line-height:60px;
+	font-size:.34rem;
+	font-family:'幼圆';
+	font-weight:bold;
+	color: #333;
+	display:flex;
+	justify-content: center;
+	position:relative;
+}
+
+.header h1::after {
+	content: attr(data-spotlight);
+	color: transparent;
+	position: absolute;
+	display: flex;
+	clip-path: ellipse(40px 40px at 0% 50%); /*画一个半径100px的正圆* at后代表圆心坐标*/
+	-webkit-clip-path: ellipse(45px 45px at 0% 50%); /*画一个半径100px的正圆* at后代表圆心坐标*/
+	animation: spotlight 7s infinite;
+	justify-content: center;
+	background-image: url(https://img1.baidu.com/it/u=1285569779,2027377220&fm=26&fmt=auto&gp=0.jpg);
+	background-size: 150%;
+	background-position: center center;
+	-webkit-background-clip: text;
+}
+
+
+@keyframes spotlight{
+	0%{
+		clip-path: ellipse(35px 35px at 0% 50%);/*画一个半径100px的正圆* at后代表圆心坐标*/
+		-webkit-clip-path: ellipse(35px 35px at 0% 50%);/*画一个半径100px的正圆* at后代表圆心坐标*/
+	}
+	/*聚光灯在最左*/
+	50%{
+		clip-path: ellipse(35px 35px at 100% 50%);/*画一个半径100px的正圆* at后代表圆心坐标*/
+		-webkit-clip-path: ellipse(35px 35px at 100% 50%);/*画一个半径100px的正圆* at后代表圆心坐标*/
+	}
+	/*聚光灯在最右*/
+	100%{
+		clip-path: ellipse(35px 35px at 0% 50%);/*画一个半径100px的正圆* at后代表圆心坐标*/
+		-webkit-clip-path: ellipse(35px 35px at 0% 50%);/*画一个半径100px的正圆* at后代表圆心坐标*/
+	}
+	/*聚光灯回到最左*/
+}
+
+@media (max-width: 1199px) {
+	.header {
+		background:url("../img/header-left.png") left bottom no-repeat, url("../img/header-right.png") right bottom no-repeat;
+		background-size:100%, 100%;
+	}
+	.header h3 {
+		line-height:48px;
+	}
+}
+
+.wrapper {
+	position:absolute;
+	top:70px;
+	bottom:0;
+	left:0;
+	right:0;
+	min-height:555px;
+}
+
+.container-fluid {
+	height:100%;
+	min-height:100%;
+}
+
+.row {
+	margin-left:-7px;
+	margin-right:-8px;
+}
+
+.row>div {
+	padding-left:7px;
+	padding-right:8px;
+}
+
+.xpanel-wrapper {
+	padding-bottom:15px;
+	box-sizing:border-box;
+}
+
+.xpanel-wrapper-1 {
+	height:100%;
+}
+
+.xpanel-wrapper-1-2 {
+	height:100%;
+}
+
+.xpanel-wrapper-1-3 {
+	height:45%;
+}
+
+.xpanel-wrapper-2-3 {
+	height:55%;
+}
+
+.xpanel {
+	padding:15px;
+	height:100%;
+	min-height:170px;
+	background:url("../img/panel.png") center no-repeat;
+	background-size:100% 100%;
+	box-sizing:border-box;
+}
+
+/* tool */
+.fill-h {
+	height:100%;
+	min-height:100%;
+}
+
+.no-margin {
+	margin:0 !important;
+}
+
+.no-padding {
+	padding:0 !important;
+}
+
+.no-bg {
+	background:none !important;
+}
+
+.no-border {
+	border:0 !important;
+}
+
+#rightBottomChart{
+	overflow:hidden;
+}
+
+#leftBottomChart{
+	color:#d9d6c3;
+	font-size:16px;
+	width:80%;
+	height:90%;
+	min-height:80%;
+	margin:15px 15px 0 50px;
+}
+
+#rightBottomChart p{
+	display:block;
+	color:white;
+	font-size:10px;
+	margin:0 auto;
+	height:10px;
+	line-height:10px;
+	font-size:18px;
+	font-weight:bold;
+	padding:15px;
+	text-align:center;
+}
+
+#rightBottomChart .item{
+	position:relative;
+	float:left;
+	width:200px;
+	height:270px;
+	background: rgba(44, 44, 44, 0.6);
+	margin-right:5px;
+	margin-top:20px;
+	box-shadow:5px 5px 10px -4px #000;
+	background-image:url("../img/ys1.jpg");
+	background-size: 100% 100%;
+	transition: all 0.6s ease-in-out 0.1s;
+}
+
+#rightBottomChart .item:hover{
+	transform: scale(1.05);
+	cursor:pointer;
+}
+
+#rightBottomChart .item .tip-content{
+	position:absolute;
+	background-color:#333;
+	color:#fff;
+	left:30%;/*这里的百分比相对于父元素*/
+	top:50%;
+	transform:translateY(-50%);/*这里的百分比相对于元素自身*/
+	width:150px;
+	z-index:2;
+	padding:5px;
+	border-radius:10px;
+	opacity: 0.7;
+	display:none;
+	transition: all 0.6s ease-in-out 0.1s;
+}
+
+#rightBottomChart .item:hover .tip-content{
+	display:block;
+}
+
+#rightBottomChart .item .tip-content:after{
+	content:'';
+	width:0;
+	height:0;
+	position:absolute;
+	border:8px solid transparent;
+	border-right-color:#333;
+	left:-14px;
+	top:50%;
+	transform:translateY(-50%);/*这里的百分比相对于元素自身*/
+}
+
+#rightBottomChart div:nth-child(2){
+	margin-right:15px;
+	margin-left:5px;
+	background-image:url("../img/ys2.jpg");
+}
+#comment-icon{
+	width:50px;
+	height:50px;
+	margin-left:10px;
+	margin-top:5px;
+}
+
+#comment-title{
+	display:inline-block;
+	font-size:25px;
+	font-weight:bold;
+	color:white;
+	margin-left:5px;
+	margin-top:18px;
+}
+
+.canvas{
+	position: absolute; 
+	width:100%; 
+	left: 0; 
+	top: 0; 
+	height: 99%; 
+	/* z-index: 0; */
+}
+
+.loading{
+	position:fixed;
+	left:0; top:0;
+	font-size:18px;
+	z-index:100000000;
+	width:100%; height:100%;
+	background:#1a1a1c;
+	text-align:center;
+}
+
+.loadbox{
+	position:absolute;
+	width:160px;
+	height:150px;
+	color: #aaa;
+	left:50%;
+	top:50%;
+	margin-top:-100px;
+	margin-left:-75px;
+}
+
+.loadbox img{
+	margin:10px auto;
+	display:block;
+	width:40px;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {width:0;height:0;}
+::-webkit-scrollbar-track {background-color:transparent;}
+::-webkit-scrollbar-thumb {border-radius:5px;background-color:rgba(0, 0, 0, 0.3);}
