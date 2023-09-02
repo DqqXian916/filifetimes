@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 # coding: utf-8
-from flask import Flask, render_template, request,jsonify
+import os
+
+from flask import Flask, render_template, request,jsonify, current_app
 import utils
 
 app = Flask(__name__)
@@ -95,6 +97,13 @@ def get_movies_infos(movie_id):
         dt_rec_tip.append({"name": i[5], "year": i[6], "dir": i[7], "star": i[8], "type": i[9]})
     # print(dt_rec_tip)
     return jsonify({"clouds": dt_wd, "stars": dt_st, "recs": data_rec,"tips":dt_rec_tip})
+
+# 加载项目小图标
+@app.route('/favicon.ico')
+def favicon():
+    # 静态路径访问的默认实现，send_static_file,
+    # 把静态文件发给浏览器
+    return current_app.send_static_file('img/filifetimes_64.ico')
 
 if __name__ == '__main__':
     app.run()
