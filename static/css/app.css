@@ -68,7 +68,7 @@ body{
 	-webkit-clip-path: ellipse(45px 45px at 0% 50%); /*画一个半径100px的正圆* at后代表圆心坐标*/
 	animation: spotlight 7s infinite;
 	justify-content: center;
-	background-image: url(https://img1.baidu.com/it/u=1285569779,2027377220&fm=26&fmt=auto&gp=0.jpg);
+	background-image: url('../img/spotlight_bg.png');
 	background-size: 150%;
 	background-position: center center;
 	-webkit-background-clip: text;
