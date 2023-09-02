@@ -33,47 +33,54 @@ body{
 	background:url("../img/header-left.png") left center no-repeat, url("../img/header-right.png") right center no-repeat;
 	background-size:43% 100%, 43% 100%;
 	overflow:hidden;
-}
-
-.top-item{
-	position:absolute; 
-	right:10px; top:15px; 
-	line-height: .75rem;
-}
-
-.top-item #showTime{
-	color:white;
-	font-size:15px;
+	display:flex;
+	justify-content: center;
+	align-items:center;
 }
 
 .header h1{
 	margin:0;
 	padding:0;
 	line-height:60px;
-	font-size:.34rem;
+	font-size:.39rem;
 	font-family:'幼圆';
 	font-weight:bold;
 	color: #333;
-	display:flex;
-	justify-content: center;
 	position:relative;
 }
 
 .header h1::after {
+	position: absolute;
+	top: 0;
+	left: 0;
 	content: attr(data-spotlight);
 	color: transparent;
-	position: absolute;
-	display: flex;
 	clip-path: ellipse(40px 40px at 0% 50%); /*画一个半径100px的正圆* at后代表圆心坐标*/
 	-webkit-clip-path: ellipse(45px 45px at 0% 50%); /*画一个半径100px的正圆* at后代表圆心坐标*/
 	animation: spotlight 7s infinite;
-	justify-content: center;
 	background-image: url('../img/spotlight_bg.png');
 	background-size: 150%;
 	background-position: center center;
 	-webkit-background-clip: text;
 }
 
+.top-item{
+	display:inline-block;
+	width:20px;
+	height: 15px;
+	position: absolute;
+	right:130px;
+	top:5px;
+}
+
+.top-item #showTime{
+	font-size:15px;
+	font-style: italic;
+	line-hight: 15px;
+	color:rgb(86,144,234);
+	font-weight: 600;
+	letter-spacing:1px;
+}
 
 @keyframes spotlight{
 	0%{
@@ -181,33 +188,41 @@ body{
 
 #rightBottomChart{
 	overflow:hidden;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	position: relative;
 }
 
 #leftBottomChart{
+	position: absolute;
 	color:#d9d6c3;
 	font-size:16px;
 	width:80%;
 	height:90%;
 	min-height:80%;
 	margin:15px 15px 0 50px;
+	display: flex;
+	justify-content: center;
 }
 
 #rightBottomChart p{
-	display:block;
+	position: absolute;
+	left:0;
+	top: 0;
 	color:white;
-	font-size:10px;
+	font-size:12px;
 	margin:0 auto;
 	height:10px;
 	line-height:10px;
-	font-size:18px;
+	font-family: tencent;
 	font-weight:bold;
 	padding:15px;
 	text-align:center;
 }
 
 #rightBottomChart .item{
-	position:relative;
-	float:left;
 	width:200px;
 	height:270px;
 	background: rgba(44, 44, 44, 0.6);
