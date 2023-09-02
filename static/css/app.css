@@ -209,15 +209,14 @@ body{
 
 #rightBottomChart p{
 	position: absolute;
-	left:0;
-	top: 0;
+	left:-7px;
+	top: -5px;
 	color:white;
-	font-size:12px;
+	font-size:19px;
 	margin:0 auto;
 	height:10px;
 	line-height:10px;
-	font-family: tencent;
-	font-weight:bold;
+	font-weight:700;
 	padding:15px;
 	text-align:center;
 }
